@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+
 interface TimerProps {
   workDuration: number;
   breakDuration: number;
