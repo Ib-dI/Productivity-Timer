@@ -107,11 +107,11 @@ export default function Pomodoro() {
     100
   );
   return (
-    <motion.div className="mx-auto flex max-w-lg flex-col items-center justify-center rounded-[75px] bg-gray-900 p-9 text-white shadow-md">
+    <motion.div className="md:mx-auto mx-2 flex max-w-lg flex-col items-center justify-center rounded-[45px] md:rounded-[100px] bg-gray-900 p-9 text-white shadow-md">
       <audio ref={audioRef} src="/alarm/alarm.mp3" />
       <div className="mb-3 flex items-center space-x-4">
         <button
-          className={`rounded-lg px-4 py-2 ${sessionType === "focus" ? "bg-gray-700" : "bg-gray-500"}`}
+          className={`rounded-lg px-2 md:px-4 py-2 ${sessionType === "focus" ? "bg-gray-700" : "bg-gray-500"}`}
           onClick={() => {
             resetTimer();
             setSessionType("focus");
@@ -120,7 +120,7 @@ export default function Pomodoro() {
           Focus
         </button>
         <button
-          className={`rounded-lg px-4 py-2 ${sessionType === "shortBreak" ? "bg-gray-700" : "bg-gray-500"}`}
+          className={`rounded-lg px-2 md:px-4 py-2 ${sessionType === "shortBreak" ? "bg-gray-700" : "bg-gray-500"}`}
           onClick={() => {
             resetTimer();
             setSessionType("shortBreak");
@@ -129,7 +129,7 @@ export default function Pomodoro() {
           Short Break
         </button>
         <button
-          className={`rounded-lg px-4 py-2 ${sessionType === "longBreak" ? "bg-gray-700" : "bg-gray-500"}`}
+          className={`rounded-lg px-2 md:px-4 py-2 ${sessionType === "longBreak" ? "bg-gray-700" : "bg-gray-500"}`}
           onClick={() => {
             resetTimer();
             setSessionType("longBreak");
@@ -174,7 +174,7 @@ export default function Pomodoro() {
       {/* Progress Bar */}
       <div className="mb-6 h-1 w-full rounded-full bg-gray-300">
         <motion.div
-          className="h-1 rounded-full bg-blue-500"
+          className="h-1 rounded-full bg-amber-500"
           initial={{ width: 0 }}
           animate={{ width: `${progressPercentage}%` }}
           transition={{ ease: "easeInOut", duration: 0.5 }}
